@@ -7,7 +7,7 @@ var check=check;
     var index:integer;
     begin
         index:=y*9+x;
-        if check.Check(index,key,table) and ord(table[index])<10 then
+        if check.Check(index,key,table) and (ord(table[index])<10 and ord(table[index]>0)) then
         begin
             table[index] :=key;
         end;
@@ -17,8 +17,8 @@ var check=check;
     var index:integer;
     begin
         index:=y*9+x;
-        if table[index]<>'.' then
-            table[index]='.'
+        if table[index]<>'0' then
+            table[index]:='0';
 
     end;
 
@@ -27,6 +27,7 @@ var check=check;
     begin
         index:=y*9+x;
     end;
+
 implementation
 type 
     check=class
