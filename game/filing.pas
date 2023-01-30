@@ -17,7 +17,6 @@ var Table:file of String ;level_type,table:string;
         while not EOLn(Table) do 
             Read(lines);
         target :=random(lines)+1;
-        property Name: TType read FName write FName;
         for l:=1 to target do
         begin
             Readln(temp);

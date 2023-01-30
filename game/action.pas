@@ -84,13 +84,15 @@ type
         _pointer:=x*3+y*3*9;
         now_pointer:=_pointer;
         for l:=1 to 3 do
+        begin
             for l2:=1 to 3 do
-                begin
-                    now_pointer:=now_pointer+l2+l*9;
-                    if now_pointer =index then
-                        continue;
-                    if table[now_pointer]=key then
-                        result:=false;
-                end;
+            begin
+                now_pointer:=now_pointer+l2+l*9;
+                if now_pointer =index then
+                    continue;
+                if table[now_pointer]=key then
+                    result:=false;
+            end;
+        end;
         check_box:=result;
     end;
