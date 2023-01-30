@@ -1,7 +1,7 @@
 program test;
 var f:file of String;s:String;
 begin
-    assign('asset/txt/easy.txt');
+    assign(f,'asset/txt/easy.txt');
     reset(f)    ;
     while not(EOF()) do
     begin
