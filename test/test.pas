@@ -8,6 +8,7 @@ begin
         while not(EOLn()) do
         begin
             read(s);
+            write(s);
         end;    
     
     end;
