@@ -2,7 +2,7 @@ unit filing;
 
 interface
 var Table:file of String ;level_type,table:string;
-    function get_table(level):String;
+    function get_table(level:integer):String;
     var l,lines:integer;temp:string;
     begin
         randomize;
@@ -21,7 +21,7 @@ var Table:file of String ;level_type,table:string;
         begin
             Readln(temp);
             if l<>target then 
-                continue
+                continue;
             table:=table+temp;
         end; 
         get_table:=table;
