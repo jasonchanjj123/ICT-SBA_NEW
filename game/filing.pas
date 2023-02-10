@@ -21,7 +21,7 @@ var Table:file of String ;level_type,table:string;
         begin
             Readln(temp);
             if l<>target then 
-                continue
+                continue;
             table:=table+temp;
         end; 
         get_table:=table;

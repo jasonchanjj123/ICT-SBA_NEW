@@ -3,7 +3,11 @@ unit action;
 interface 
 var check=check;
 
+<<<<<<< HEAD
     procedure add_key_to_table(x:integer,y:integer,key:string,table:string);
+=======
+    procedure add_key_to_table(x:integer,y:integer,key:integer,table:integer);
+>>>>>>> e835faf58647ad75bdcd3bac7cf61fe7bd04fada
     var index:integer;
     begin
         index:=y*9+x;
@@ -13,7 +17,11 @@ var check=check;
         end;
     end;
 
+<<<<<<< HEAD
     procedure del_key_from_table(x:integer,y:integer,key:string,table:string);
+=======
+    procedure del_key_from_table(x:integer,y:integer,key:integer,table:integer);
+>>>>>>> e835faf58647ad75bdcd3bac7cf61fe7bd04fada
     var index:integer;
     begin
         index:=y*9+x;
@@ -45,7 +53,11 @@ type
                 Check:=check_box(index:integer,key:string,table:string) and check_column(index:integer,key:string,table:string) and check_row(index:integer,key:string,table:string) then  
             end;
 
+<<<<<<< HEAD
     function check.check_row(index:integer,key:string,table:string):boolean;
+=======
+    function check.check_row(index:integer,key:integer,table:string):boolean;;
+>>>>>>> e835faf58647ad75bdcd3bac7cf61fe7bd04fada
     var l,row :integer;result:boolean;
     begin
         result:=true;
