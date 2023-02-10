@@ -53,11 +53,7 @@ type
                 Check:=check_box(index:integer,key:string,table:string) and check_column(index:integer,key:string,table:string) and check_row(index:integer,key:string,table:string) then  
             end;
 
-<<<<<<< HEAD
     function check.check_row(index:integer,key:string,table:string):boolean;
-=======
-    function check.check_row(index:integer,key:integer,table:string):boolean;;
->>>>>>> e835faf58647ad75bdcd3bac7cf61fe7bd04fada
     var l,row :integer;result:boolean;
     begin
         result:=true;
