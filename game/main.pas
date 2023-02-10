@@ -2,7 +2,7 @@ program main;
 var table:String;
 
 
-procedure game_event(x,y,key);
+procedure game_event(x:integer,y:integer,key:string);
 begin
     
 end;

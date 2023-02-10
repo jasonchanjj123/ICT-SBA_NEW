@@ -2,11 +2,11 @@ unit filing;
 
 interface
 var Table:file of String ;level_type,table:string;
-    function get_table(level):String;
+    function get_table(level:Integer):String;
     var l,lines:integer;temp:string;
     begin
         randomize;
-        table:=''
+        table:='';
         case (level) of 
             1:level_type:='easy.txt';
             2:level_type:='hard.txt';
@@ -25,4 +25,5 @@ var Table:file of String ;level_type,table:string;
             table:=table+temp;
         end; 
         get_table:=table;
-    end;
+
+end;

@@ -3,7 +3,7 @@ unit action;
 interface 
 var check=check;
 
-    procedure add_key_to_table(x,y,key,table);
+    procedure add_key_to_table(x:integer,y:integer,key:string,table:string);
     var index:integer;
     begin
         index:=y*9+x;
@@ -13,7 +13,7 @@ var check=check;
         end;
     end;
 
-    procedure del_key_from_table(x,y,key,table);
+    procedure del_key_from_table(x:integer,y:integer,key:string,table:string);
     var index:integer;
     begin
         index:=y*9+x;
@@ -22,7 +22,7 @@ var check=check;
 
     end;
 
-    procedure hint(x,y,table);
+    procedure hint(x:integer,y:integer,table:string);
     var index:integer;
     begin
         index:=y*9+x;
@@ -32,20 +32,20 @@ implementation
 type 
     check=class
     public
-        constructor Check(index,key,table):boolean;
+        constructor Check(index:integer,key:string,table:string):boolean;
 
     private
-        function check_row(index,key,table):boolean;
-        function check_column(index,key,table):integer;
-        function check_box(index,key,table):boolean
+        function check_row(index:integer,key:string,table:string):boolean;
+        function check_column(index:integer,key:string,table:string):integer;
+        function check_box(index:integer,key:string,table:string):boolean
 
 
-    constructor check.Check(index,key,table):boolean;
+    constructor check.Check(index:integer,key:string,table:string):boolean;
             begin
-                Check:=check_box(index,key,table) and check_column(index,key,table) and check_row(index,key,table) then  
+                Check:=check_box(index:integer,key:string,table:string) and check_column(index:integer,key:string,table:string) and check_row(index:integer,key:string,table:string) then  
             end;
 
-    function check.check_row(index,key,table):boolean;;
+    function check.check_row(index:integer,key:string,table:string):boolean;
     var l,row :integer;result:boolean;
     begin
         result:=true;
@@ -61,7 +61,7 @@ type
             check_row:=result;
     end;
 
-    function check.check_column(index,key,table):integer;
+    function check.check_column(index:integer,key:string,table:string):integer;
     var l,column:integer;result=boolean;
     begin
         column:=index mod 9+1;
@@ -75,7 +75,7 @@ type
         check_column:=result;
     end;
 
-    function check.check_box(index,key,table):boolean
+    function check.check_box(index:integer,key:string,table:string):boolean
     var x,y,l.l2,_pointer,now_pointer:integer;box:array of integer;result:boolean;
     begin
         result:=true;
