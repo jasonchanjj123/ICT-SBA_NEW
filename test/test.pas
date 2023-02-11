@@ -1,16 +1,16 @@
 program test;
-var f:file of String;s:String;
+var f:TextFile;s,temp:String;l:Integer;
 begin
-    assign(f,'asset/txt/easy.txt');
-    reset(f)    ;
-    while not(EOF()) do
+    assign(f,'/workspaces/ICT-SBA_NEW/asset/puzzle/txt/test.txt');
+    reset(f);
+    s:='';
+    temp:='';
+    for l:=1 to 3 do
     begin
-        while not(EOLn()) do
-        begin
-            read(s);
-            write(s);
-        end;    
-    
+        Readln(f)
     end;
-    
+    Readln(f,s);
+    Close(f);
+    Write(s);
+    Write('ok');
 end.

@@ -1,41 +1,10 @@
 unit action;
 
 interface 
-var check=check;
-
-<<<<<<< HEAD
     procedure add_key_to_table(x:integer,y:integer,key:string,table:string);
-=======
-    procedure add_key_to_table(x:integer,y:integer,key:integer,table:integer);
->>>>>>> e835faf58647ad75bdcd3bac7cf61fe7bd04fada
-    var index:integer;
-    begin
-        index:=y*9+x;
-        if check.Check(index,key,table) and (ord(table[index])<10 and ord(table[index]>0)) then
-        begin
-            table[index] :=key;
-        end;
-    end;
-
-<<<<<<< HEAD
     procedure del_key_from_table(x:integer,y:integer,key:string,table:string);
-=======
-    procedure del_key_from_table(x:integer,y:integer,key:integer,table:integer);
->>>>>>> e835faf58647ad75bdcd3bac7cf61fe7bd04fada
-    var index:integer;
-    begin
-        index:=y*9+x;
-        if table[index]<>'0' then
-            table[index]:='0';
-
-    end;
-
     procedure hint(x:integer,y:integer,table:string);
-    var index:integer;
-    begin
-        index:=y*9+x;
-    end;
-
+    
 implementation
 type 
     check=class
@@ -47,7 +16,7 @@ type
         function check_column(index:integer,key:string,table:string):integer;
         function check_box(index:integer,key:string,table:string):boolean
 
-
+    var Check:check;
     constructor check.Check(index:integer,key:string,table:string):boolean;
             begin
                 Check:=check_box(index:integer,key:string,table:string) and check_column(index:integer,key:string,table:string) and check_row(index:integer,key:string,table:string) then  
@@ -103,4 +72,28 @@ type
             end;
         end;
         check_box:=result;
+    end;
+    procedure add_key_to_table(x:integer,y:integer,key:string,table:string);
+    var index:integer;
+    begin
+        index:=y*9+x;
+        if Check.Check(index,key,table) and (ord(table[index])<10 and ord(table[index]>0)) then
+        begin
+            table[index] :=key;
+        end;
+    end;
+
+    procedure del_key_from_table(x:integer,y:integer,key:string,table:string);
+    var index:integer;
+    begin
+        index:=y*9+x;
+        if table[index]<>'0' then
+            table[index]:='0';
+
+    end;
+
+    procedure hint(x:integer,y:integer,table:string);
+    var index:integer;
+    begin
+        index:=y*9+x;
     end;
